@@ -85,4 +85,22 @@ public class CalculatorTest {
 		}
 
 	}
+
+	@Test
+	public void testSimpleModOperation() throws Exception {
+
+		// setup
+		Calculator calc = new CalculatorImpl();
+
+		// execute
+		calc.push(6.0);
+		calc.push(3);
+		double result = calc.perform(Operation.mod);
+
+		// verify
+		assertEquals(0, result);
+
+	}
+
+
 }
